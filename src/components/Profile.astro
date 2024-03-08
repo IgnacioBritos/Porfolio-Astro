@@ -1,0 +1,52 @@
+---
+
+
+import Badge from "../components/Badge.astro";
+import GitHub from "../components/icons/GitHub.astro";
+import LinkedIn from "../components/icons/LinkedIn.astro";
+import SocialPill from "../components/SocialPill.astro";
+import Mail from "../components/icons/Mail.astro";
+
+---
+
+<div class="flex gap-4 items-center">
+    <img
+    class="rounded-full size-16 mb-4"
+    src="https://avatars.githubusercontent.com/u/135151646?v=4"
+      alt="Ignacio photo"
+    />
+    <a
+      href="https://www.linkedin.com/in/ignacio-britos-053653232/"
+      target="_blank"
+      rel="noopener"
+    >
+      <Badge><span class="text-base"> Disponible para trabajar</span></Badge></a
+    >
+
+  </div>
+  <h1 class="text-white text-3xl lg:text-5xl font-bold flex flex-row gap-x-4 pb-6 lg:pb-6">
+    Hola, Soy Ignacio Britos
+  </h1>
+  <h2 class="text-xl lg:text-xl pb-3 text-wrap opacity-85 max-w-[650px]">
+    <span class="text-blue-200">Desarrollador Full Stack</span> en <span
+      class="text-yellow-100">Argentina, Mendoza 📍</span
+    >. Especializado en el desarrollo con React, Redux, NodeJS, PostgreSQL y
+    más. 
+  </h2>
+  <nav class="flex gap-4 mt-4 flex-wrap">
+    <SocialPill href="https://github.com/IgnacioBritos">
+      <GitHub class="size-4 lg:size-4" />
+      GitHub
+    </SocialPill>
+
+    <SocialPill
+      href="https://www.linkedin.com/in/ignacio-britos-053653232/"
+    >
+      <LinkedIn class="size-4 lg:size-4" />
+      LinkedIn
+    </SocialPill>
+
+    <SocialPill  href='mailto:gasparbritos2011@gmial.com'>
+      <Mail class="size-1 lg:size-2" /> gasparbritos2011@gmail.com
+    </SocialPill>
+  </nav>

@@ -1,0 +1,159 @@
+---
+import JavaScript from "./icons/JavaScript.astro";
+import CSS from "./icons/Cssicon.astro";
+import Nodejs from "./icons/Nodejs.astro";
+import HTML from "./icons/HTML.astro";
+import Redux from "./icons/Redux.astro";
+import PostgreSQL from "./icons/PostgreSQL.astro";
+import React from "./icons/React.astro";
+import Firebase from "./icons/firebase.astro";
+import Tailwind from "./icons/Tailwind.astro";
+import GitHub from "./icons/GitHub.astro";
+import Link from "./icons/Link.astro";
+import SocialPill from "./SocialPill.astro";
+import Code from "./icons/Code.astro";
+const TAGS = {
+  JavaScript: {
+    name: "JavaScript",
+    class:
+      "rounded-full border border-yellow-100/10 flex justify-center items-center text-xs lg:text-base gap-2 lg:gap-3 py-1 px-1 lg:py-2 lg:px-4 bg-yellow-200/20",
+    icon: JavaScript,
+  },
+  CSS: {
+    name: "CSS",
+    class:
+      "rounded-full border border-[#0C73B8]/10 flex justify-center items-center text-xs lg:text-base gap-2 lg:gap-3 py-1 px-1 lg:py-2 lg:px-4 bg-[#0C73B8]/20",
+    icon: CSS,
+  },
+  HTML: {
+    name: "HTML",
+    class:
+      "rounded-full border border-orange-100/10 flex justify-center items-center text-xs lg:text-base gap-2 lg:gap-3 py-1 px-1 lg:py-2 lg:px-4 bg-orange-400/20",
+    icon: HTML,
+  },
+  React: {
+    name: "React",
+    class:
+      "rounded-full border border-blue-100/10 flex justify-center items-center text-xs lg:text-base gap-2 lg:gap-3 py-1 px-1 lg:py-2 lg:px-4 bg-cyan-400/20",
+    icon: React,
+  },
+  Redux: {
+    name: "Redux",
+    class:
+      "rounded-full border border-purple-100/10 flex justify-center items-center text-xs lg:text-base gap-2 lg:gap-3 py-1 px-1 lg:py-2 lg:px-4 bg-purple-400/20",
+    icon: Redux,
+  },
+  Nodejs: {
+    name: "NodeJs",
+    class:
+      "rounded-full border border-green-100/10 flex justify-center items-center text-xs lg:text-base gap-2 lg:gap-3 py-1 px-1 lg:py-2 lg:px-4 bg-green-400/30",
+    icon: Nodejs,
+  },
+  PostgreSQL: {
+    name: "PostgreSQL",
+    class:
+      "rounded-full border border-[#336791]/10 flex justify-center items-center text-xs lg:text-base gap-2 lg:gap-3 py-1 px-1 lg:py-2 lg:px-4 bg-[#336791]/30",
+    icon: PostgreSQL,
+  },
+  Firebase: {
+    name: "Firebase",
+    class:
+      "rounded-full border border-[#F6820C]/10 flex justify-center items-center text-xs lg:text-base gap-2 lg:gap-3 py-1 px-1 lg:py-2 lg:px-4 bg-[#F6820C]/40",
+    icon: Firebase,
+  },
+  Tailwind: {
+    name: "Tailwind",
+    class:
+      "rounded-full border border-[#38BDF8]/10 flex justify-center items-center text-xs lg:text-base gap-2 lg:gap-3 py-1 px-1 lg:py-2 lg:px-4 bg-[#38BDF8]/30",
+    icon: Tailwind,
+  },
+};
+const PROJECTS = [
+  {
+    title: "EngPartner - Plataforma de chat global Multilingüe",
+    description:
+      "EngPartner es una plataforma que ofrece traducción en tiempo real a 7 idiomas, incluyendo funciones premium y un panel de administración. Desarrollado con tecnologías como JavaScript, React, Node.js y Firebase. Destaca por su enfoque en la comunicación global y la usabilidad.",
+    github: "https://github.com/IgnacioBritos/EngPartnerV2",
+    image: "/proyect/engpartner.png",
+    link:"https://engpartner-aa0ce.web.app",
+    tags: [
+      TAGS.JavaScript,
+      TAGS.CSS,
+      TAGS.Nodejs,
+      TAGS.HTML,
+      TAGS.Redux,
+      TAGS.React,
+      TAGS.Firebase,
+    ],
+  },
+  {
+    title: "Rick And Morty - Biblioteca de personajes (API REST)",
+    description:
+    "La API de 'Rick y Morty' brinda información detallada sobre los personajes de la serie. Permite descubrir nuevos personajes, marcar favoritos y unirse a una comunidad en crecimiento para explorar, compartir y contribuir a la pasión por la serie",
+    github: "https://github.com/IgnacioBritos/-Rick-and-Morty",
+    image: "/proyect/RickandMorty.png",
+    tags: [
+      TAGS.JavaScript,
+      TAGS.CSS,
+      TAGS.Nodejs,
+      TAGS.HTML,
+      TAGS.Redux,
+      TAGS.React,
+    ],
+  },
+];
+---
+
+
+<h2 class="flex gap-2 text-3xl flex-wrap font-semibold items-center pb-16">
+  <Code class="size-4 lg:size-10" />
+  Proyectos
+ </h2>
+<div id="proyectos" class="flex flex-col gap-y-16">
+  {
+    PROJECTS.map((project) => (
+      <article id={project.title} class="flex flex-col space-x-0 space-y-8 group md:flex-row md:space-x-8 md:space-y-0">
+        <div class="w-full md:w-1/2">
+          <div class="relative flex flex-col items-center col-span-6 row-span-5 gap-8 transition duration-500 ease-in-out transform shadow-xl overflow-clip rounded-xl sm:rounded-xl md:group-hover:-translate-y-1 md:group-hover:shadow-2xl lg:border lg:border-gray-800 lg:hover:border-gray-700 lg:hover:bg-gray-800/50">
+            <img
+                class="object-cover object-top w-full h-56 transition duration-500 sm:h-full md:scale-110 md:group-hover:scale-105"
+                src={project.image}
+                alt={project.title}
+              />
+            </div>
+        </div>
+        <div class="w-full md:w-1/2 md:max-w-lg">
+          <h3 class="font-semibold text-2xl text-yellow-100 mb-2">
+            {project.title}
+          </h3>
+          <p class="text-sm mb-4 text-pretty">{project.description}</p>
+          <ul class="flex gap-4 mt-4 flex-wrap mb-4">
+            {project.tags.map((tag) => (
+              <li>
+                <span class={` flex gap-1 ${tag.class}`}>
+                  <tag.icon class="size-4" />
+                 
+                </span>
+              </li>
+            ))}
+          </ul>
+          <footer class="flex items-end justify-start mt-4 gap-x-4">
+            {project.github && (
+              <SocialPill href={project.github}>
+                <GitHub class="size-4" />
+                Code
+                
+              </SocialPill>
+            )}
+            {project?.link && (
+              <SocialPill href={project.link}>
+                <Link class="size-4" />
+                Preview
+              </SocialPill>
+            )}
+          </footer>
+        </div>
+      </article>
+    ))
+  }
+</div>

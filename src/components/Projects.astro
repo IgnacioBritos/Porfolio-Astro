@@ -101,7 +101,24 @@ const PROJECTS = [
       TAGS.React,
     ],
   },
+  {
+    title: "PokeMemo Test: Juego de Memoria Pokémon",
+    description: "PokeMemo Test es un juego web de memoria. Desarrollado utilizando JavaScript, React y CSS, el juego desafía a los jugadores a encontrar las parejas de cartas de Pokémon en una baraja mezclada. Con opciones de dificultad que van desde 15 hasta 40 cartas, los usuarios pueden personalizar su experiencia de juego. Como creador del proyecto, mi objetivo fue fusionar la nostalgia de Pokémon con un desafío divertido y cognitivamente estimulante.",
+    github:"https://github.com/IgnacioBritos/PokeMemo-Test",
+    image:"/proyect/video.gif",
+    tags: [
+      TAGS.JavaScript,
+      TAGS.CSS,
+      TAGS.HTML,
+      TAGS.React,
+      TAGS.Tailwind,
+      TAGS.Nodejs
+    ],
+  }
 ];
+
+
+
 ---
 
 
@@ -114,12 +131,17 @@ const PROJECTS = [
     PROJECTS.map((project) => (
       <article id={project.title} class="flex flex-col space-x-0 space-y-8 group md:flex-row md:space-x-8 md:space-y-0">
         <div class="w-full md:w-1/2">
-          <div class="relative flex flex-col items-center col-span-6 row-span-5 gap-8 transition duration-500 ease-in-out transform shadow-xl overflow-clip rounded-xl sm:rounded-xl md:group-hover:-translate-y-1 md:group-hover:shadow-2xl lg:border lg:border-gray-800 lg:hover:border-gray-700 lg:hover:bg-gray-800/50">
-            <img
+          <div class="relative flex flex-col items-center col-span-6 row-span-5 gap-8 transition duration-500 ease-in-out transform shadow-xl overflow-clip rounded-xl sm:rounded-xl md:group-hover:-translate-y-1 md:group-hover:shadow-2xl lg:border lg:border-gray-800 lg:hover:border-gray-700 lg:hover:bg-gray-800/50"
+         
+          >
+        
+              <img
                 class="object-cover object-top w-full h-56 transition duration-500 sm:h-full md:scale-110 md:group-hover:scale-105"
                 src={project.image}
                 alt={project.title}
               />
+    
+            
             </div>
         </div>
         <div class="w-full md:w-1/2 md:max-w-lg">
